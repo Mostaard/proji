@@ -1,18 +1,16 @@
 @font-face {
     font-family: "vidaloka";
-    src: url("/Vidaloka-Regular.eot"); /* IE9 Compat Modes */
-    src: url("/Vidaloka-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-    url("/Vidaloka-Regular.otf") format("opentype"), /* Open Type Font */
-    url("/Vidaloka-Regular.svg") format("svg"), /* Legacy iOS */
-    url("/Vidaloka-Regular.ttf") format("truetype"), /* Safari, Android, iOS */
-    url("/Vidaloka-Regular.woff") format("woff"), /* Modern Browsers */
-    url("/Vidaloka-Regular.woff2") format("woff2"); /* Modern Browsers */
-    font-weight: normal;
-    font-style: normal;
+    src: url("Vidaloka-Regular.eot"); /* IE9 Compat Modes */
+    src: url("Vidaloka-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("Vidaloka-Regular.otf") format("opentype"), /* Open Type Font */
+    url("Vidaloka-Regular.svg") format("svg"), /* Legacy iOS */
+    url("Vidaloka-Regular.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("Vidaloka-Regular.woff") format("woff"), /* Modern Browsers */
+    url("Vidaloka-Regular.woff2") format("woff2"); /* Modern Browsers */
 }
 
 @font-face {
-    font-family: glacial;
+    font-family: "glacial";
     src: url("GlacialIndifference-Regular.eot") format("eot");
     src: url("GlacialIndifference-Regular.otf") format("otf");
     src: url("GlacialIndifference-Regular.ttf") format("ttf");
