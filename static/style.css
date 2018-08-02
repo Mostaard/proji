@@ -1,0 +1,828 @@
+@font-face {
+    font-family: "vidaloka";
+    src: url("/Vidaloka-Regular.eot"); /* IE9 Compat Modes */
+    src: url("/Vidaloka-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("/Vidaloka-Regular.otf") format("opentype"), /* Open Type Font */
+    url("/Vidaloka-Regular.svg") format("svg"), /* Legacy iOS */
+    url("/Vidaloka-Regular.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("/Vidaloka-Regular.woff") format("woff"), /* Modern Browsers */
+    url("/Vidaloka-Regular.woff2") format("woff2"); /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: glacial;
+    src: url("GlacialIndifference-Regular.eot") format("eot");
+    src: url("GlacialIndifference-Regular.otf") format("otf");
+    src: url("GlacialIndifference-Regular.ttf") format("ttf");
+    src: url("GlacialIndifference-Regular.woff") format("woff");
+    src: url("GlacialIndifference-Regular.woff2") format("woff2");
+}
+
+
+* {
+padding: 0;
+margin: 0;
+}
+
+html {
+height: 100%;
+}
+
+img {
+    image-orientation: from-image;
+}
+
+iframe {
+    width: 100%;
+    height: 35rem;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    display: block;
+}
+
+body {
+    background: white;
+    font-family: glacial, sans-serif;
+}
+
+footer {
+    height: 220px;
+}
+
+section {
+    margin-bottom: 7rem;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.headline {
+    margin-top: 6rem;
+    font-family: vidaloka, serif;
+}
+
+.villa-nav {
+    background-color: black !important;
+    color: white;
+    /*height: 7rem;*/
+    transition: height 600ms ease-in-out;
+    border-bottom: 1px solid white;
+    overflow: hidden;
+
+}
+
+.villa-nav .nav-item {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.nav-mudcloth {
+    -webkit-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+    position: absolute;
+    right: 5%;
+    width: 70rem;
+    height: 15rem;
+    background: url(img/ethnic0.jpg) repeat-x 80%;
+    background-size: auto 100%;
+    transition: opacity 1s ease-in-out;
+    z-index: -1;
+
+}
+
+.navbar-toggler {
+    color: white !important;
+    border-color: white !important;
+    padding: 1rem;
+}
+
+.brand-extra {
+    display: block;
+    font-size: 70%;
+    font-weight: lighter;
+    max-height: 1rem;
+    opacity: 1;
+    transition: opacity 1s ease-in-out, max-height 0.5s ease-in-out;
+
+}
+
+.brand-extra.scrolled {
+    display: block;
+    opacity: 0;
+    max-height: 0;
+    transition: opacity 1s ease-in-out, max-height 0.5s ease-in-out;
+}
+
+.nav-spacer {
+    height: 7rem;
+    transition: height 1s ease-in-out;
+}
+
+.nav-spacer.scrolled {
+    height: 0;
+    transition: height 1s ease-in-out;
+}
+
+.villa-btn {
+    background: black;
+    border-color: black;
+    transition: border 450ms ease-in-out, background-color 450ms ease-in-out;
+    padding: 1rem;
+}
+
+.villa-btn:hover {
+    background: rgb(44, 44, 44);
+    border-color: rgb(44, 44, 44);
+    transition: border 450ms ease-in-out, background-color 450ms ease-in-out;
+
+}
+
+.villa-btn-book {
+    border: 1px solid white;
+}
+
+.navbar-brand {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white !important;
+    text-align: center !important;
+    width: 16rem;
+    font-size: 150%;
+    margin-right: 2rem;
+    font-family: vidaloka, serif;
+
+}
+
+.navbar-text {
+    color: white !important;
+}
+
+.villa-nav.scrolled {
+}
+
+.villa-nav.scrolled > .nav-mudcloth {
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+}
+
+.nav-center-logo.scrolled {
+    top: -14rem;
+    transition: top 750ms linear;
+}
+
+.nav-center-logo {
+    display: none;
+    position: absolute;
+    background-size: 70% !important;
+    background: rgba(255, 255, 255, 0) url("img/monaluci.png") no-repeat 50% 50%;
+    left: calc(50% + -10em);
+    top: 0;
+    width: 20rem;
+    height: 15rem;
+    transition: top 750ms linear;
+}
+
+.footer-right {
+    position: fixed;
+    right: calc(10% + -2.5rem);
+    bottom: -7rem;
+    width: 6rem;
+    height: 6.5rem;
+    transition: bottom 500ms linear;
+
+}
+
+.footer-right.scrolled {
+    bottom: -0.5rem;
+    transition: bottom 500ms linear;
+
+}
+
+.nav-link {
+    color: white ! important;
+}
+
+.nav-link:hover {
+    color: rgba(255, 255, 255, 0.5) !important;
+
+}
+
+.nav-link:hover {
+    color: rgba(255, 255, 255, 0.5) !important;
+
+}
+
+a.active {
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid white;
+}
+
+.bottom-book {
+    position: absolute;
+    left: -0.99rem;
+    top: 1.30rem;
+    font-size: 90%;
+}
+
+#home {
+    height: 80vh;
+    color: white;
+    background-size: 100%;
+    background: url('img/gallery/villa.jpg') no-repeat fixed 0 -9rem;
+}
+
+.home-container {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    padding-top: 3rem;
+}
+
+.airbnb {
+    width: 1.8rem;
+}
+
+.airbnb2 {
+    width: 8rem;
+}
+
+.airbnb:hover {
+    opacity: 0.5;
+}
+
+.airbnb2:hover {
+    opacity: 0.5;
+}
+
+#book {
+    margin-top: 5rem;
+    margin-bottom: 0;
+
+}
+
+.book-container {
+    background-color: rgb(255, 255, 255);
+    padding: 4rem;
+    border-radius: 2px;
+}
+
+.footer-logo {
+    width: 8rem;
+    margin: 2rem;
+}
+
+.footer-logo-h {
+    width: 12rem;
+    margin: 2rem;
+}
+
+.villa-footer {
+    border-top: 1px solid white;
+    height: 900px;
+    background-color: rgb(0, 0, 0) !important;
+    background: url('img/mudclothsimple.jpg') repeat-y 50% 0;
+    background-size: 35% auto;
+
+}
+
+/*
+custom modal
+*/
+
+/* The Modal (background) */
+.custom-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+#modal_image {
+    background-color: rgba(0, 0, 0, 1); /* Black w/ opacity */
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+#modal-image-title {
+    margin: auto;
+    text-align: center;
+    color: #ccc;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
+
+/* end custom modal*/
+
+/* album */
+
+.album {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    margin-top: 5rem;
+    border: 1px solid rgb(235, 235, 235);
+    border-radius: 3px;
+
+}
+
+.card {
+    float: left;
+    width: 33%;
+    padding: .75rem;
+    margin-bottom: 2rem;
+    border: 0;
+
+}
+
+.card > img {
+    margin-bottom: .75rem;
+    height: auto;
+    width: 100%;
+
+}
+
+.card-text {
+    font-size: 85%;
+}
+
+.images {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.villa-img {
+    border-radius: 2px 2px 2px 2px;
+    height: auto;
+    width: 100%;
+}
+
+.villa-img:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.pixlee {
+    width: 85%;
+    margin: 0 auto;
+
+}
+
+.instagram-header-image {
+    width: 5%;
+    margin: 0.5rem;
+}
+
+.instagram-header {
+    border-bottom: 1px solid rgb(235, 235, 235);
+}
+
+.img_holder {
+    cursor: pointer !important;
+}
+
+#tap2shop_widget .tap2shop_frame ul .tap2shop_photo_block .img_holder :hover {
+    cursor: pointer !important;
+}
+
+/* end album */
+/* about franschhoek */
+
+#franschhoek {
+    background: url('img/protea.jpg') no-repeat 0 80%;
+    background-size: 30%;
+
+}
+
+.book-absolute {
+    position: fixed;
+    bottom: 6%;
+    opacity: 0;
+    right: 5%;
+    transition: opacity 600ms ease-in-out;
+}
+
+.book-absolute.scrolled.bottom {
+    opacity: 0;
+    transition: opacity 600ms ease-in-out;
+}
+
+.book-absolute.scrolled {
+    transition: opacity 600ms ease-in-out;
+    opacity: 1;
+}
+
+.franschhoek-container {
+    margin-top: 7rem;
+}
+
+.about-book {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.franschhoek-bg {
+    position: sticky;
+    width: 100%;
+    height: 15rem;
+    background: url('img/franschhoek.jpg') no-repeat fixed;
+    background-size: auto 100%;
+    z-index: -1;
+}
+
+.franschhoek-bg-2 {
+    position: sticky;
+    width: 100%;
+    height: 15rem;
+    background: url('img/franschhoek-2.jpg') no-repeat fixed;
+    background-size: auto 100%;
+    z-index: -1;
+}
+
+.franschhoek-bg-color {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+}
+
+.aboutline {
+    position: relative;
+    padding: 0;
+    list-style: none;
+}
+
+.about-img {
+    width: 100%;
+}
+
+.aboutline:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    width: 2px;
+    margin-left: -1.5px;
+    content: '';
+    background-color: #e9ecef
+}
+
+.aboutline > li {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 50px
+}
+
+.aboutline > li:after, .aboutline > li:before {
+    display: table;
+    content: ' '
+}
+
+.aboutline > li:after {
+    clear: both
+}
+
+.aboutline > li .aboutline-panel {
+    position: relative;
+    float: right;
+    width: 100%;
+    padding: 0 20px 0 100px;
+    text-align: left
+}
+
+.aboutline > li .aboutline-panel:before {
+    right: auto;
+    left: -15px;
+    border-right-width: 15px;
+    border-left-width: 0
+}
+
+.aboutline > li .aboutline-panel:after {
+    right: auto;
+    left: -14px;
+    border-right-width: 14px;
+    border-left-width: 0
+}
+
+.aboutline > li .aboutline-image {
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    margin-left: 0;
+    text-align: center;
+    color: #fff;
+    border: 7px solid #e9ecef;
+    border-radius: 100%;
+    background-color: #fed136
+}
+
+.aboutline > li .aboutline-image h4 {
+    font-size: 10px;
+    line-height: 14px;
+    margin-top: 12px
+}
+
+.aboutline > li.aboutline-inverted > .aboutline-panel {
+    float: right;
+    padding: 0 20px 0 100px;
+    text-align: left
+}
+
+.aboutline > li.aboutline-inverted > .aboutline-panel:before {
+    right: auto;
+    left: -15px;
+    border-right-width: 15px;
+    border-left-width: 0
+}
+
+.aboutline > li.aboutline-inverted > .aboutline-panel:after {
+    right: auto;
+    left: -14px;
+    border-right-width: 14px;
+    border-left-width: 0
+}
+
+.aboutline > li:last-child {
+    margin-bottom: 0
+}
+
+.aboutline .aboutline-heading h4 {
+    margin-top: 0;
+    color: inherit
+}
+
+.aboutline .aboutline-heading h4.subheading {
+    text-transform: none
+}
+
+.aboutline .aboutline-body > p, .aboutline .aboutline-body > ul {
+    margin-bottom: 0
+}
+
+@media (min-width: 768px) {
+    .aboutline:before {
+        left: 50%
+    }
+
+    .aboutline > li {
+        min-height: 100px;
+        margin-bottom: 100px
+    }
+
+    .aboutline > li .aboutline-panel {
+        float: left;
+        width: 41%;
+        padding: 0 20px 20px 30px;
+        text-align: right
+    }
+
+    .aboutline > li .aboutline-image {
+        left: 50%;
+        width: 100px;
+        height: 100px;
+        margin-left: -50px
+    }
+
+    .aboutline > li .aboutline-image h4 {
+        font-size: 13px;
+        line-height: 18px;
+        margin-top: 16px
+    }
+
+    .aboutline > li.aboutline-inverted > .aboutline-panel {
+        float: right;
+        padding: 0 30px 20px 20px;
+        text-align: left
+    }
+}
+
+@media (min-width: 992px) {
+    .aboutline > li {
+        min-height: 150px
+    }
+
+    .aboutline > li .aboutline-panel {
+        padding: 0 20px 20px
+    }
+
+    .aboutline > li .aboutline-image {
+        width: 150px;
+        height: 150px;
+        margin-left: -75px
+    }
+
+    .aboutline > li .aboutline-image h4 {
+        font-size: 18px;
+        line-height: 26px;
+        margin-top: 30px
+    }
+
+    .aboutline > li.aboutline-inverted > .aboutline-panel {
+        padding: 0 20px 20px
+    }
+}
+
+@media (min-width: 1200px) {
+    .aboutline > li {
+        min-height: 170px
+    }
+
+    .aboutline > li .aboutline-panel {
+        padding: 0 20px 20px 100px
+    }
+
+    .aboutline > li .aboutline-image {
+        width: 170px;
+        height: 170px;
+        margin-left: -85px
+    }
+
+    .aboutline > li .aboutline-image h4 {
+        margin-top: 40px
+    }
+
+    .aboutline > li.aboutline-inverted > .aboutline-panel {
+        padding: 0 100px 20px 20px
+    }
+}
+
+/* Ameneties */
+
+.airbnb-btn {
+    color: red;
+}
+
+#ameneties {
+    margin-bottom: 0;
+    background: black url(img/simplepattern.jpg) repeat-x 0 50%;
+    background-size: 20%;
+
+}
+
+.ameneties-text h2 {
+    color: black !important;
+}
+
+#ameneties h2 {
+    color: white;
+}
+
+#ameneties .container {
+    background: white;
+    border-radius: 3px 8px 3px 8px;
+    margin-bottom: 5rem;
+}
+
+.ameneties-pills .nav-item .nav-link {
+    color: rgb(0, 0, 0) !important;
+
+}
+
+.ameneties-hover {
+    position: absolute;
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    color: rgba(0, 0, 0, 0);
+    transition: background-color 0.5s ease, 0.5s ease;
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+}
+
+.ameneties-hover:hover {
+    background-color: rgba(254, 254, 254, 0.8);
+    color: rgba(0, 0, 0, 0.6);
+    transition: background-color 0.5s ease, color 0.5s ease;
+    border: 1px solid rgb(235, 235, 235);
+}
+
+.amenety-icon {
+    margin-top: 4rem;
+    color: rgb(0, 0, 0);
+}
+
+.amenety {
+    height: 16rem;
+    padding: 0;
+}
+
+.ameneties-hover-top {
+
+}
+
+.ameneties-hover-bottom {
+    position: absolute;
+    bottom: 0;
+}
+
+#pills-tabContent {
+    border-top: 0;
+    border-radius: 0 0 2rem 2rem;
+    overflow: hidden;
+
+}
+
+.amaneties-content {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.rules {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.bottom-links {
+    background-color: orange;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+}
+
+

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Villa Mona luci</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'bootstrap/css/bootstrap.css') }}">
+    <script src="{{ url_for('static', filename = 'jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'bootstrap/js/bootstrap.bundle.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'script.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+          integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+<body data-spy="scroll" data-target="#monav" data-offset="200">
+<nav id="monav" class="navbar navbar-expand-lg sticky-top navbar-light bg-light villa-nav">
+    <a class="navbar-brand js-scroll-trigger" href="#home">Villa Mona Luci<br><span
+            class="brand-extra">Franschhoek, South Africa</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fas fa-bars"></span> Menu
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#home">Home </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#gallery">Gallery</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#ameneties">Ameneties</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#franschhoek">Franschhoek</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#book">Book</a>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav ">
+            <li class="nav-item p-1"><a class="nav-link" href="https://www.airbnb.com/rooms/25987117">
+                <img class="airbnb"
+                     src="{{ url_for('static', filename = 'img/airbnb.svg') }}"
+                     alt="airbnb">
+                <span class="sr-only">airbnb</span></a>
+            </li>
+            <li class="nav-item p-1"><a class="nav-link" href="https://www.facebook.com"><span
+                    class="fa-lg fab fa-facebook" aria-hidden="true"></span><span
+                    class="sr-only">facebook</span></a>
+            </li>
+            <li class="nav-item p-1"><a class="nav-link" href="https://www.instagram.com/villamonaluci/"><span
+                    class="fab fa-lg fa-instagram" aria-hidden="true"></span><span class="sr-only">instagram</span></a>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <div class="nav-mudcloth"></div>
+
+
+    <div class="nav-spacer">
+
+        <div id="modal-lightbox" class="custom-modal">
+            <p class="close mr-5"><span class="fa fa-times-circle"></span></p>
+            <h4 id="modal-image-title" class="modal-title">Modal title</h4>
+            <img class="modal-content" id="modal_image">
+            <div id="caption"></div>
+        </div>
+
+
+</nav>
+<section id="home">
+    <div class="home-container">
+        <div class="overflow-hidden p-3 p-md-5 m-md-3  text-center">
+            <div class="col-md-5 p-lg-5 mx-auto my-5">
+                <h1 class="headline display-4 font-weight-normal">Villa Mona Luci</h1>
+                <p class="lead font-weight-normal">Our second home, your perfect hideaway!</p>
+                <a class="btn btn-lg btn-primary villa-btn js-scroll-trigger" href="#gallery">Show me!</a>
+            </div>
+            <div class="product-device box-shadow d-none d-md-block"></div>
+            <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+        </div>
+    </div>
+</section>
+
+
+<section id="gallery" class="mt-5">
+    <div class="container">
+        <div class="album">
+            <h2 class="text-center display-4">Gallery</h2>
+            <div class="row images p-2">
+                <div class="card sr-pic">
+                    <p id="url_1" hidden>static/img/gallery/table.jpg</p>
+                    <h4 id="title_1" class="card-title" hidden></h4>
+                    <img data-toggle="modal" data-target="#img-modal" id="thumbnail_1" class="villa-img"
+                         src="{{ url_for('static', filename = 'img/gallery/table.jpg') }}"
+                         alt="Card image cap" onclick="showImage(this.id)">
+                    <p id="description_1" class="card-text" hidden></p>
+                </div>
+                <div class="card sr-pic">
+                    <p id="url_2" hidden>static/img/gallery/inside.jpg</p>
+                    <h4 id="title_2" class="card-title" hidden></h4>
+                    <img data-toggle="modal" data-target="#img-modal" id="thumbnail_2" class="villa-img"
+                         src="{{ url_for('static', filename = 'img/gallery/inside.jpg') }}"
+                         alt="Card image cap" onclick="showImage(this.id)">
+                    <p id="description_2" class="card-text" hidden></p>
+                </div>
+                <div class="card sr-pic">
+                    <p id="url_3" hidden>static/img/gallery/pool.jpg</p>
+                    <h4 id="title_3" class="card-title" hidden></h4>
+                    <img data-toggle="modal" data-target="#img-modal" id="thumbnail_3" class="villa-img"
+                         src="{{ url_for('static', filename = 'img/gallery/pool.jpg') }}"
+                         alt="Card image cap" onclick="showImage(this.id)">
+                    <p id="description_3" class="card-text" hidden></p>
+                </div>
+                <div class="card sr-pic">
+                    <p id="url_4" hidden>static/img/gallery/sink.jpg</p>
+                    <h4 id="title_4" class="card-title" hidden></h4>
+                    <img data-toggle="modal" data-target="#img-modal" id="thumbnail_4" class="villa-img"
+                         src="{{ url_for('static', filename = 'img/gallery/sink.jpg') }}"
+                         alt="Card image cap" onclick="showImage(this.id)">
+                    <p id="description_4" class="card-text" hidden></p>
+                </div>
+                <div class="card sr-pic">
+                    <p id="url_5" hidden>static/img/gallery/kitchen.jpg</p>
+                    <h4 id="title_5" class="card-title" hidden></h4>
+                    <img data-toggle="modal" data-target="#img-modal" id="thumbnail_5" class="villa-img"
+                         src="{{ url_for('static', filename = 'img/gallery/kitchen.jpg') }}"
+                         alt="Card image cap" onclick="showImage(this.id)">
+                    <p id="description_5" class="card-text" hidden></p>
+                </div>
+                <div class="card sr-pic">
+                    <p id="url_6" hidden>static/img/gallery/shower.jpg</p>
+                    <h4 id="title_6" class="card-title" hidden></h4>
+                    <img data-toggle="modal" data-target="#img-modal" id="thumbnail_6" class="villa-img"
+                         src="{{ url_for('static', filename = 'img/gallery/shower.jpg') }}"
+                         alt="Card image cap" onclick="showImage(this.id)">
+                    <p id="description_6" class="card-text" hidden></p>
+                </div>
+                <div class="card sr-pic">
+                    <p id="url_7" hidden>static/img/gallery/bed1.jpg</p>
+                    <h4 id="title_1" class="card-title" hidden></h4>
+                    <img data-toggle="modal" data-target="#img-modal" id="thumbnail_7" class="villa-img"
+                         src="{{ url_for('static', filename = 'img/gallery/bed1.jpg') }}"
+                         alt="Card image cap" onclick="showImage(this.id)">
+                    <p id="description_7" class="card-text" hidden></p>
+                </div>
+                <div class="card sr-pic">
+                    <p id="url_8" hidden>static/img/gallery/back.jpg</p>
+                    <h4 id="title_8" class="card-title" hidden></h4>
+                    <img data-toggle="modal" data-target="#img-modal" id="thumbnail_8" class="villa-img"
+                         src="{{ url_for('static', filename = 'img/gallery/back.jpg') }}"
+                         alt="Card image cap" onclick="showImage(this.id)">
+                    <p id="description_8" class="card-text" hidden></p>
+                </div>
+                <div class="card sr-pic">
+                    <p id="url_9" hidden>static/img/gallery/bed2.jpg</p>
+                    <h4 id="title_9" class="card-title" hidden></h4>
+                    <img data-toggle="modal" data-target="#img-modal" id="thumbnail_9" class="villa-img"
+                         src="{{ url_for('static', filename = 'img/gallery/bed2.jpg') }}"
+                         alt="Card image cap" onclick="showImage(this.id)">
+                    <p id="description_9" class="card-text" hidden></p>
+                </div>
+            </div>
+            <div class="pixlee">
+                <h3 class="mt-5 instagram-header">
+                    <a class="nav-link" href="https://www.instagram.com/villamonaluci/"><img
+                            class="instagram-header-image"
+                            src="{{ url_for('static', filename = 'img/insta.svg') }}"
+                            alt="instagram"></a>
+
+                </h3>
+                <div id="pixlee_container" class=></div>
+            </div>
+
+        </div>
+    </div>
+
+
+</section>
+<div class="franschhoek-bg">
+    <div class="franschhoek-bg-color"></div>
+</div>
+
+<section class="p-5" id="ameneties">
+    <h2 class="text-center display-4 mb-5">What the villa has to offer</h2>
+
+    <div class="container">
+        <div class="row text-center p-4">
+            <div class="col-3 amenety sr-icon">
+                <div class="ameneties-hover">
+                    <p class="ameneties-hover-top">Located in Franschhoek, Western Cape Province of South
+                        Africa.</p>
+                    <p class="ameneties-hover-bottom">Here, you will find everything necessary for an enjoyable
+                        stay.</p>
+                </div>
+                <span class="fas fa-5x fa-home amenety-icon"
+                      aria-hidden="true"></span>
+            </div>
+            <div class="col-3 amenety sr-icon">
+                <div class="ameneties-hover">
+                    <p class="ameneties-hover-top">The house is equiped with a bath and a shower. </p>
+                </div>
+                <span class="fas fa-5x fa-bath amenety-icon"
+                      aria-hidden="true"></span>
+            </div>
+            <div class="col-3 amenety sr-icon">
+                <div class="ameneties-hover">
+                    <p class="ameneties-hover-top">WIFI is available at the villa.</p>
+                </div>
+                <span class="fas fa-5x fa-wifi amenety-icon"
+                      aria-hidden="true"></span>
+            </div>
+            <div class="col-3 amenety sr-icon">
+                <div class="ameneties-hover">
+                    <p class="ameneties-hover-top">You can stay here with up to six people.</p>
+                </div>
+                <span class="fas fa-5x fa-users amenety-icon"
+                      aria-hidden="true"></span>
+            </div>
+            <div class="col-3 amenety sr-icon">
+                <div class="ameneties-hover">
+                    <p class="ameneties-hover-top">Private parking available for two cars.</p>
+                    <p class="ameneties-hover-bottom"></p>
+                </div>
+                <span class="fas fa-5x fa-parking amenety-icon"
+                      aria-hidden="true"></span>
+            </div>
+            <div class="col-3 amenety sr-icon">
+                <div class="ameneties-hover">
+                    <p class="ameneties-hover-top">You will find a cosy swimmingpool in the back.</p>
+                </div>
+                <span class="fa-5x fas fa-swimming-pool amenety-icon"
+                      aria-hidden="true"></span>
+            </div>
+            <div class="col-3 amenety sr-icon">
+                <div class="ameneties-hover">
+                    <p class="ameneties-hover-top">At the house you will find a kitchen.</p>
+                    <p class="ameneties-hover-bottom">The kitchen is fully equiped and up to modern standards.</p>
+                </div>
+                <span class="fa-5x fas fa-utensils amenety-icon"
+                      aria-hidden="true"></span>
+            </div>
+            <div class="col-3 amenety sr-icon">
+                <div class="ameneties-hover">
+                    <p class="ameneties-hover-top">There are two bedrooms.</p>
+                    <p class="ameneties-hover-bottom">Each bedroom has its own bathroom.</p>
+                </div>
+                <span class="fa-5x fas fa-door-open amenety-icon"
+                      aria-hidden="true"></span>
+            </div>
+
+        </div>
+        <div class="container ameneties-text text-center p-5">
+            <h3> ... and lots more on <a class="airbnb-btn ml-2"
+                                         href="https://www.airbnb.com/rooms/25987117"><img
+                    class="airbnb2" src="{{ url_for('static', filename = 'img/airbnb2.svg') }}" alt="airbnb"></a></h3>
+        </div>
+    </div>
+
+
+</section>
+
+
+<div class="franschhoek-bg-2">
+    <div class="franschhoek-bg-color"></div>
+</div>
+
+
+<section id="franschhoek">
+    <div class="container franschhoek-container">
+        <div class="row">
+            <div class="col-lg-12 text-center mb-5">
+                <h2 class="display-4">What Franschhoek has to offer</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="aboutline">
+                    <li class="sr-about">
+                        <div class="aboutline-image">
+                            <img class="rounded-circle img-fluid about-img"
+                                 src="{{ url_for('static', filename = 'img/about/wine.jpg') }}" alt="">
+                        </div>
+                        <div class="aboutline-panel">
+                            <div class="aboutline-heading">
+                                <h4>Wine</h4>
+                            </div>
+                            <div class="aboutline-body">
+                                <p class="text-muted">Franschhoek is known as the wine capital of the country, there
+                                    is
+                                    even a winetram guiding you through the vineyards.</p>
+                                <p class="text-muted mt-3">Winelovers will find wine tasting possibilities on the
+                                    vineyards just outside town,
+                                    established more than 300 years ago.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="sr-about aboutline-inverted">
+                        <div class="aboutline-image">
+                            <img class="rounded-circle img-fluid about-img"
+                                 src="{{ url_for('static', filename = 'img/about/nature.jpg') }}"
+                                 alt="">
+                        </div>
+                        <div class="aboutline-panel">
+                            <div class="aboutline-heading">
+                                <h4>Nature</h4>
+                            </div>
+                            <div class="aboutline-body">
+                                <p class="text-muted">The region really astonishing nature, perfect for people
+                                    wanting
+                                    to go hiking or just about anyone. who doesn't appreciate a nice view. </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="sr-about">
+                        <div class="aboutline-image">
+                            <img class="rounded-circle img-fluid about-img"
+                                 src="{{ url_for('static', filename = 'img/about/history.jpg') }}"
+                                 alt="">
+                        </div>
+                        <div class="aboutline-panel">
+                            <div class="aboutline-heading">
+                                <h4>History and culture</h4>
+                            </div>
+                            <div class="aboutline-body">
+                                <p class="text-muted">There is a monument called Huguenot Monument and a museum
+                                    built to
+                                    honour the French protestants who came to live here about four centuries
+                                    ago. </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="sr-about aboutline-inverted">
+                        <div class="aboutline-image about-book">
+                            <h3><a class="js-scroll-trigger about-centered" href="#book">Book now</a></h3>
+                        </div>
+                        <div class="aboutline-panel">
+                            <div class="aboutline-heading">
+                                <h4>And much, much more</h4>
+                            </div>
+                            <div class="aboutline-body">
+                                <p class="text-muted">Welness, cars, you name it.</p>
+                                <p class="text-muted">What remains if for you to go discover!</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105968.61484324069!2d19.07785172059626!3d-33.90203418133962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcdbd076805b2cf%3A0x3cb48654d356b2f9!2sFranschhoek%2C+7690%2C+Zuid-Afrika!5e0!3m2!1snl!2sbe!4v1528812782072"
+            width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+
+<footer class="py-2 bg-dark villa-footer">
+    <section id="book" class="pt-5">
+        <div class="book-absolute">
+            <a class="btn btn-lg btn-primary villa-btn villa-btn-book js-scroll-trigger" href="#book">Book now!</a>
+        </div>
+        <div class="container book-container">
+            <h1 class="display-4"> Book </h1>
+            <h3> Contact us through this form or book now on <a class="airbnb-btn ml-2"
+                                                                href="https://www.airbnb.com/rooms/25987117"><img
+                    class="airbnb2" src="{{ url_for('static', filename = 'img/airbnb2.svg') }}" alt="airbnb"></a></h3>
+            <div class="contact-form mt-5">
+                <div class="row">
+                    <div class="container">
+                        <form action="/mail" method="post" role="form" id="mail-form">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="contact-email">Email *</label>
+                                        <input name="email" type="email" class="form-control" id="contact-email"
+                                               placeholder="Your email adress">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="contact-email">Telephone / Cell phone</label>
+                                        <input name="tel" type="text" class="form-control" id="contact-tel"
+                                               placeholder="Your telephone nummer">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="contact-email">Last name</label>
+                                        <input name="last-name" type="text" class="form-control" id="contact-naam"
+                                               placeholder="Your last name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contact-email">First name</label>
+                                        <input name="first-name" type="text" class="form-control" id="contact-voornaam"
+                                               placeholder="Your first name">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Your message *</label>
+                                <textarea name="message" required class="form-control" id="exampleFormControlTextarea1"
+                                          rows="5"
+                                          placeholder="Your message here"></textarea>
+                            </div>
+                            <small> Only fields marked with * are required</small>
+                            <button id="sendmailbtn" type="button" class="btn villa-btn btn-primary float-right">Send
+                            </button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal mail-info-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Thanks for your message! We will contact you as soon as possible.</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="modal-mail-field"></p>
+                        <p id="modal-tel-field"></p>
+                        <p id="modal-firstname-field"></p>
+                        <p id="modal-lastname-field"></p>
+                        <p id="modal-message-field"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn villa-btn btn-primary" data-dismiss="modal">Perfect!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footer-links"></div>
+
+</footer>
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+<script type="text/javascript">window.PixleeAsyncInit = function () {
+    Pixlee.init({apiKey: '1eWsXwRlmq2NmdnA0Ov'});
+    Pixlee.addSimpleWidget({widgetId: '6201'});
+};</script>
+<script src="//instafeed.assets.pixlee.com/assets/pixlee_widget_1_0_0.js"></script>
+<script src="{{ url_for('static', filename = 'extra.js') }}"></script>
+
+</body>
+</html>
