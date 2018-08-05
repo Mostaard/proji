@@ -133,14 +133,14 @@ a:hover {
 
 .villa-btn {
     background: rgb(255, 90, 96);
-    border-color: rgb(255, 90, 96)!important;
+    border-color: rgb(255, 90, 96) !important;
     transition: border-color 450ms ease-in-out, background-color 450ms ease-in-out;
     padding: 1rem;
 }
 
 .villa-btn:hover {
     background: rgba(255, 90, 96, 0.5);
-    border-color: rgba(255, 90, 96, 0.5)!important;;
+    border-color: rgba(255, 90, 96, 0.5) !important;;
     transition: border-color 450ms ease-in-out, background-color 450ms ease-in-out;
 
 }
@@ -222,12 +222,10 @@ a.active {
 }
 
 .headline {
-    margin-top:13rem;
+    margin-top: 13rem;
     letter-spacing: 8px;
     font-family: vidaloka, serif;
 }
-
-
 
 .headline-mona {
     font-size: 120%;
@@ -829,19 +827,24 @@ custom modal
     margin: 0 auto;
 }
 
-#about-us{
-    background:black;
-    color:white;
-    margin-bottom:0;
+#about-us {
+    background: black;
+    color: white;
+    margin-bottom: 0;
 }
 
-.about-text{
-    max-width:50rem;
+.about-text {
+    max-width: 50rem;
 }
 
-.about-us-container{
-    border-left : 1px solid white;
+.about-us-container {
+    border-left: 1px solid white;
 
+}
+
+.spaced-letters {
+    letter-spacing: 5px;
+    font-size: 90%;
 }
 
 
