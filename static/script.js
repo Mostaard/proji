@@ -25,12 +25,10 @@ jQuery(document).ready(function ($) {
     $(function () {
         $(document).scroll(function () {
             var $nav = $(".villa-nav");
-            var $logo = $(".nav-center-logo");
             var $brand = $(".brand-extra");
             var $footer = $(".book-absolute");
             var $spacer = $(".nav-spacer");
             $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-            $logo.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
             $brand.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
             $footer.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
             $spacer.toggleClass('scrolled', $(this).scrollTop() > $nav.height());

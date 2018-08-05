@@ -29,7 +29,7 @@ def send_mail():
     last_name = request.form['last-name']
     message = request.form['message']
     msg = Message('Bericht van de Villa Mona Luci website ', sender='mostaard.mailer@gmail.com',
-                  recipients=['vandermostenjonas@gmail.com'])
+                  recipients=['artist@nickymyny.com'])
     msg.html = "<p>Bericht van " + first_name + " " + last_name + " " + email + " " + tel + " </p>" + "<p>" + message + "</p>"
     mail.send(msg)
 

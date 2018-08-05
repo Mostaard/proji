@@ -36,6 +36,9 @@
                 <a class="nav-link js-scroll-trigger" href="#franschhoek">Franschhoek</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#about-us">About us</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="#book">Book</a>
             </li>
         </ul>
@@ -63,23 +66,24 @@
 
 
     <div class="nav-spacer">
+    </div>
 
-        <div id="modal-lightbox" class="custom-modal">
-            <p class="close mr-5"><span class="fa fa-times-circle"></span></p>
-            <h4 id="modal-image-title" class="modal-title">Modal title</h4>
-            <img class="modal-content" id="modal_image">
-            <div id="caption"></div>
-        </div>
+    <div id="modal-lightbox" class="custom-modal">
+        <p class="close mr-5"><span class="fa fa-times-circle"></span></p>
+        <h4 id="modal-image-title" class="modal-title">Modal title</h4>
+        <img class="modal-content" id="modal_image">
+        <div id="caption"></div>
+    </div>
 
 
 </nav>
 <section id="home">
     <div class="home-container">
         <div class="overflow-hidden p-3 p-md-5 m-md-3  text-center">
-            <div class="col-md-5 p-lg-5 mx-auto my-5">
-                <h1 class="headline display-4 font-weight-normal">Villa Mona Luci</h1>
-                <p class="lead font-weight-normal">Our second home, your perfect hideaway!</p>
-                <a class="btn btn-lg btn-primary villa-btn js-scroll-trigger" href="#gallery">Show me!</a>
+            <div class="col-md-5 p-lg-5 mx-auto home-text">
+                <h1 class="sr-only">VILLA MONA LUCI
+                </h1>
+                <p class="sr-only">Our second home, your perfect hideaway!</p>
             </div>
             <div class="product-device box-shadow d-none d-md-block"></div>
             <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
@@ -92,80 +96,6 @@
     <div class="container">
         <div class="album">
             <h2 class="text-center display-4">Gallery</h2>
-            <div class="row images p-2">
-                <div class="card sr-pic">
-                    <p id="url_1" hidden>static/img/gallery/table.jpg</p>
-                    <h4 id="title_1" class="card-title" hidden></h4>
-                    <img data-toggle="modal" data-target="#img-modal" id="thumbnail_1" class="villa-img"
-                         src="{{ url_for('static', filename = 'img/gallery/table.jpg') }}"
-                         alt="Card image cap" onclick="showImage(this.id)">
-                    <p id="description_1" class="card-text" hidden></p>
-                </div>
-                <div class="card sr-pic">
-                    <p id="url_2" hidden>static/img/gallery/inside.jpg</p>
-                    <h4 id="title_2" class="card-title" hidden></h4>
-                    <img data-toggle="modal" data-target="#img-modal" id="thumbnail_2" class="villa-img"
-                         src="{{ url_for('static', filename = 'img/gallery/inside.jpg') }}"
-                         alt="Card image cap" onclick="showImage(this.id)">
-                    <p id="description_2" class="card-text" hidden></p>
-                </div>
-                <div class="card sr-pic">
-                    <p id="url_3" hidden>static/img/gallery/pool.jpg</p>
-                    <h4 id="title_3" class="card-title" hidden></h4>
-                    <img data-toggle="modal" data-target="#img-modal" id="thumbnail_3" class="villa-img"
-                         src="{{ url_for('static', filename = 'img/gallery/pool.jpg') }}"
-                         alt="Card image cap" onclick="showImage(this.id)">
-                    <p id="description_3" class="card-text" hidden></p>
-                </div>
-                <div class="card sr-pic">
-                    <p id="url_4" hidden>static/img/gallery/sink.jpg</p>
-                    <h4 id="title_4" class="card-title" hidden></h4>
-                    <img data-toggle="modal" data-target="#img-modal" id="thumbnail_4" class="villa-img"
-                         src="{{ url_for('static', filename = 'img/gallery/sink.jpg') }}"
-                         alt="Card image cap" onclick="showImage(this.id)">
-                    <p id="description_4" class="card-text" hidden></p>
-                </div>
-                <div class="card sr-pic">
-                    <p id="url_5" hidden>static/img/gallery/kitchen.jpg</p>
-                    <h4 id="title_5" class="card-title" hidden></h4>
-                    <img data-toggle="modal" data-target="#img-modal" id="thumbnail_5" class="villa-img"
-                         src="{{ url_for('static', filename = 'img/gallery/kitchen.jpg') }}"
-                         alt="Card image cap" onclick="showImage(this.id)">
-                    <p id="description_5" class="card-text" hidden></p>
-                </div>
-                <div class="card sr-pic">
-                    <p id="url_6" hidden>static/img/gallery/shower.jpg</p>
-                    <h4 id="title_6" class="card-title" hidden></h4>
-                    <img data-toggle="modal" data-target="#img-modal" id="thumbnail_6" class="villa-img"
-                         src="{{ url_for('static', filename = 'img/gallery/shower.jpg') }}"
-                         alt="Card image cap" onclick="showImage(this.id)">
-                    <p id="description_6" class="card-text" hidden></p>
-                </div>
-                <div class="card sr-pic">
-                    <p id="url_7" hidden>static/img/gallery/bed1.jpg</p>
-                    <h4 id="title_1" class="card-title" hidden></h4>
-                    <img data-toggle="modal" data-target="#img-modal" id="thumbnail_7" class="villa-img"
-                         src="{{ url_for('static', filename = 'img/gallery/bed1.jpg') }}"
-                         alt="Card image cap" onclick="showImage(this.id)">
-                    <p id="description_7" class="card-text" hidden></p>
-                </div>
-                <div class="card sr-pic">
-                    <p id="url_8" hidden>static/img/gallery/back.jpg</p>
-                    <h4 id="title_8" class="card-title" hidden></h4>
-                    <img data-toggle="modal" data-target="#img-modal" id="thumbnail_8" class="villa-img"
-                         src="{{ url_for('static', filename = 'img/gallery/back.jpg') }}"
-                         alt="Card image cap" onclick="showImage(this.id)">
-                    <p id="description_8" class="card-text" hidden></p>
-                </div>
-                <div class="card sr-pic">
-                    <p id="url_9" hidden>static/img/gallery/bed2.jpg</p>
-                    <h4 id="title_9" class="card-title" hidden></h4>
-                    <img data-toggle="modal" data-target="#img-modal" id="thumbnail_9" class="villa-img"
-                         src="{{ url_for('static', filename = 'img/gallery/bed2.jpg') }}"
-                         alt="Card image cap" onclick="showImage(this.id)">
-                    <p id="description_9" class="card-text" hidden></p>
-                </div>
-            </div>
             <div class="pixlee">
                 <h3 class="mt-5 instagram-header">
                     <a class="nav-link" href="https://www.instagram.com/villamonaluci/"><img
@@ -272,6 +202,9 @@
 
 
 <section id="franschhoek">
+    <img class="franschoek-logo-bg"
+         src="{{ url_for('static', filename = 'img/logo-black-circle.jpg') }}">
+
     <div class="container franschhoek-container">
         <div class="row">
             <div class="col-lg-12 text-center mb-5">
@@ -355,13 +288,43 @@
         </div>
     </div>
 </section>
+<section id="about-us" class="py-5">
+    <div class="about-us-container container my-5">
+        <h1 class="text-left"> About us</h1>
+        <div class="about-text my-5">
+            <p>
+                Three years ago, a friend’s celebration holiday guided us east from Capetown and Stellenbosch, to
+                Franschhoek. We were staying in a quaint holiday home run by fellow Belgians. They owned this little
+                holiday cottage in the town centre, which had stolen our hearts immediately. Fortunately enough, we were
+                able to purchase said cottage from them not much later. It is around this time that our little baby girl
+                was born. We felt compelled to take her with us to Franschhoek when she was only 5 weeks old. It is
+                her superstar namesake that rests upon the cottage, ‘Mona Luci’.
+            </p>
+            <p>
+                With all the legalities and paperwork that inevitably is connected to the rental market, it was only
+                very recently that we were able to offer the cottage up for rent. This included our renovation plans and
+                the possibility of expanding the accommodations in the years to come. We invested a lot of time in
+                finding the right people to manage the premises and take care of our future guests. We want to
+                guarantee our guests receive the best possible local hosts to ensure a dedicated personalized service. Having
+                two resident ladies that have lived in Franschhoek almost their entire life and have years of experience
+                in hosting guests, they are the living guidebook to Franschhoek and they will be happy and more than
+                able to answer any question you might have.
+            </p>
+            <p>
+                Feel free to check our Instagram account, which is updated regularly with new photos of our experience
+                in and around the West Cape, and in Villa Mona Luci in particular.
+            </p>
+
+        </div>
+    </div>
+</section>
 
 <div>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105968.61484324069!2d19.07785172059626!3d-33.90203418133962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcdbd076805b2cf%3A0x3cb48654d356b2f9!2sFranschhoek%2C+7690%2C+Zuid-Afrika!5e0!3m2!1snl!2sbe!4v1528812782072"
             width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
 
-<footer class="py-2 bg-dark villa-footer">
+<footer class="bg-dark villa-footer">
     <section id="book" class="pt-5">
         <div class="book-absolute">
             <a class="btn btn-lg btn-primary villa-btn villa-btn-book js-scroll-trigger" href="#book">Book now!</a>
@@ -445,9 +408,11 @@
 
 </footer>
 <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+
 <script type="text/javascript">window.PixleeAsyncInit = function () {
-    Pixlee.init({apiKey: '1eWsXwRlmq2NmdnA0Ov'});
-    Pixlee.addSimpleWidget({widgetId: '6201'});
+    Pixlee.init({apiKey: 'nxG0XmAQhv99uz8mjr4'});
+    Pixlee.addSimpleWidget({widgetId: '7167'});
 };</script>
 <script src="//instafeed.assets.pixlee.com/assets/pixlee_widget_1_0_0.js"></script>
 <script src="{{ url_for('static', filename = 'extra.js') }}"></script>
