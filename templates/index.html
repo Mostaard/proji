@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Villa Mona luci</title>
-
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename = 'bootstrap/css/bootstrap.css') }}">
     <script src="{{ url_for('static', filename = 'jquery.js') }}"></script>
     <script src="{{ url_for('static', filename = 'bootstrap/js/bootstrap.bundle.js') }}"></script>
@@ -95,15 +95,12 @@
 <section id="gallery" class="mt-5">
     <div class="container">
         <div class="album">
-            <h2 class="text-center display-4">Gallery</h2>
+            <h2 class="text-center display-4 m-5">Gallery <a href="https://www.instagram.com/villamonaluci/"><img
+                    class="instagram-header-image"
+                    src="{{ url_for('static', filename = 'img/insta.svg') }}"
+                    alt="instagram"></a>
+            </h2>
             <div class="pixlee">
-                <h3 class="mt-5 instagram-header">
-                    <a class="nav-link" href="https://www.instagram.com/villamonaluci/"><img
-                            class="instagram-header-image"
-                            src="{{ url_for('static', filename = 'img/insta.svg') }}"
-                            alt="instagram"></a>
-
-                </h3>
                 <div id="pixlee_container" class=></div>
             </div>
 
@@ -305,13 +302,15 @@
                 very recently that we were able to offer the cottage up for rent. This included our renovation plans and
                 the possibility of expanding the accommodations in the years to come. We invested a lot of time in
                 finding the right people to manage the premises and take care of our future guests. We want to
-                guarantee our guests receive the best possible local hosts to ensure a dedicated personalized service. Having
+                guarantee our guests receive the best possible local hosts to ensure a dedicated personalized service.
+                Having
                 two resident ladies that have lived in Franschhoek almost their entire life and have years of experience
                 in hosting guests, they are the living guidebook to Franschhoek and they will be happy and more than
                 able to answer any question you might have.
             </p>
             <p>
-                Feel free to check our Instagram account, which is updated regularly with new photos of our experience
+                Feel free to check our <a href="https://www.instagram.com/villamonaluci/">instagram</a> account, which is
+                updated regularly with new photos of our experience
                 in and around the West Cape, and in Villa Mona Luci in particular.
             </p>
 

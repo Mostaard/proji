@@ -73,6 +73,9 @@ a:hover {
     transition: height 600ms ease-in-out;
     border-bottom: 1px solid white;
     overflow: hidden;
+    top: 0;
+    position: fixed;
+    width: 100%;
 
 }
 
@@ -215,10 +218,10 @@ a.active {
 }
 
 #home {
-    height: 90vh;
+    height: 95vh;
     color: white;
     background-size: 100%;
-    background: url('img/gallery/villa.jpg') no-repeat fixed center;
+    background: url('img/villa.jpg') no-repeat fixed center;
 }
 
 .headline {
@@ -234,14 +237,28 @@ a.active {
 }
 
 .home-container {
+    margin-top: 3rem;
     background: rgba(0, 0, 0, 0.4) url("img/logo-white.png") no-repeat no-repeat;
     background-size: 45% auto;
     background-position-x: 50%;
-    background-position-y: 50%;
+    background-position-y: 65%;
     width: 100%;
     height: 100%;
     padding-top: 3rem;
     opacity: 0.90;
+}
+
+
+@media (max-width: 1000px) {
+    .home-container {
+    background-size: 75% auto;
+}
+}
+
+@media (max-width: 1200px) {
+    .home-container {
+    background-size: 75% auto;
+}
 }
 
 .airbnb {
@@ -835,6 +852,10 @@ custom modal
 
 .about-text {
     max-width: 50rem;
+}
+
+.about-text a {
+    font-weight: bold;
 }
 
 .about-us-container {
